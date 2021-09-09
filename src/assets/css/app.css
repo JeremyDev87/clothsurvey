@@ -1,0 +1,65 @@
+.contents {
+
+    margin:1rem 1rem 0 1rem;
+    display : flex;
+    flex-direction : column;
+}
+
+.ques{
+    align-items : center;
+    display:flex;
+    justify-content : space-between;
+
+    padding:1rem 0 1rem 0;
+}
+
+.ques span {
+    width : 50%;
+    text-align: left;
+    font-size: 80%;
+    font-weight: light;
+}
+
+.select {
+    text-align: right;
+    width : 50%;
+}
+.select input[type=radio] {
+    display:none;
+}
+
+.select input[type=radio]+label {
+    display : inline-block;
+    cursor : pointer;
+    border : 1px solid #333;
+    text-align : center;
+    font-weight: bold;
+    font-size : 10px;
+    padding : 1rem;
+    width: 20%;
+    box-shadow: 2px 2px 2px gray;
+}
+
+.select input[type=radio]:checked+label {
+    background-color:#f7a249;
+    color:#fff;
+}
+.btnDiv{
+    width:100%;
+    text-align: center;
+    margin-top : 3rem;
+}
+.agreeMsg {
+    font-weight: bold;
+    color:gray;
+}
+.selectSubmit {
+    border:none;
+    border-radius: 1rem;
+    background-color : #ffd378;
+    box-shadow: 2px 2px 2px gray;
+    padding : 1rem;
+    font-weight: bold;
+    width : 80%;
+    text-align: center;
+}

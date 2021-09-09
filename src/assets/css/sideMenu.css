@@ -1,0 +1,39 @@
+.sideMenu {
+    width : 70%;
+    height : 100%;
+    background-color : #FFFFFF;
+    position : absolute;
+    box-shadow: 5px 5px 5px 5px gray;
+    color: gray;
+    text-align: center;
+}
+
+.sideMenu ul {
+    margin : 0;
+    padding : 0;
+}
+
+.sideMenu li {
+    list-style : none;
+    padding : 1rem;
+    text-align: center;
+    top : 50%;
+    box-shadow : 1px 1px 1px 1px gray;
+    display : flex;
+}
+
+.sideMenu li img {
+    width:1rem;
+    margin-right : 1rem;
+}
+
+.MenuInfo {
+    padding : 1rem 0 0.5rem 0;
+    /* box-shadow : 1px 1px 1px 1px gray; */
+    background-color : #F7A249;
+    color:#F8F8F8;
+}
+
+.MenuInfo p {
+    margin-top : 0rem;
+}

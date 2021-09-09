@@ -1,0 +1,67 @@
+.Login {
+    background-color: #FFFFFF;
+}
+.topLogoDiv {
+    margin:0.5rem;
+    height : 10%;
+}
+
+.topLogoDiv img {
+    width : 20%;
+}
+
+.contentsDiv {
+    color : #cbc693;
+    height : 70%;
+    text-align: center;
+    margin-top : 10%;
+}
+
+.contentsDiv img {
+    width:70%;
+    color : #cbc693;
+    /* filter: invert(50%); */
+}
+
+.contentsDiv p {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.submitDiv {
+    height : 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logoTitle {
+
+}
+
+#loginID {
+    margin : 1rem 2rem 1rem 2rem;
+    padding : 1rem 0 1rem 0;
+    border:none;
+    border-bottom : solid #F7A249 2px;
+    text-align: center;
+}
+#loginName {
+    margin : 0 2rem 1rem 2rem;
+    padding : 1rem 0 1rem 0;
+    border:none;
+    border-bottom : solid #F7A249 2px;
+    text-align: center;
+}
+#doLoginBtn {
+    margin : 0 2rem 0 2rem;
+    padding : 1.5rem 0 1.5rem 0;
+    border : none;
+    background-color : #F7A249;
+    box-shadow : 1px 1px 1px #ffd378;
+    font-size: x-large;
+    font-weight: bolder;
+    color : #666666;
+}
+
+
+

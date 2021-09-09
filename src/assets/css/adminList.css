@@ -1,0 +1,42 @@
+.adminList {
+    background-color : #FFFFFF;
+    width : 100%;
+}
+.adminList h1, h6 {
+    text-align: center;
+    color : #808080
+}
+
+.adminList section {
+    text-align: center;
+}
+.adminList section table{
+    margin: 0.5rem;
+    width:95%;
+    text-align: center;
+}
+.adminList section table td{
+    font-size:small;
+    padding : 0.5rem;
+    /* box-shadow: 1px 1px 1px 1px gray; */
+    border : solid 1px #808080;
+}
+.adminList section table th{
+    font-weight: bold;
+    padding : 0.5rem;
+    border:solid 1px #808080;
+    background-color: #ffecb3;
+}
+
+.adminList section table tbody tr:nth-child(odd) {
+    background-color: #F8F8F1;
+}
+.adminList section table tbody tr:nth-child(even) {
+    background-color: #FFFFFF;
+}
+
+.adminList table td img {
+    object-fit: cover;
+    width : 1rem;
+    height : 1rem;
+}
