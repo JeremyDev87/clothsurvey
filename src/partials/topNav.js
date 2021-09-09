@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react';
 import {connect} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import '../assets/css/topNav.css';
-import hystecLogo from '../assets/images/hystec_logo.png';
+import hystecLogo from '../assets/images/SK-hynix_RGB_EN.png';
 import SideMenu from './sideMenu';
 
 function TopNav(props) {
@@ -12,10 +12,10 @@ function TopNav(props) {
     useEffect(()=>{
         // console.table(props);
 
-        if(props.state===undefined){
-            alert('로그인이 필요합니다.');
-            history.push('./');
-        }
+        // if(props.state===undefined){
+        //     alert('로그인이 필요합니다.');
+        //     history.push('./');
+        // }
     })
 
     let [menuActive,setMenuActive] = useState(false);

@@ -1,5 +1,7 @@
 .Login {
-    background-color: #FFFFFF;
+    background-color: #fff;
+    width: 100%;
+    
 }
 .topLogoDiv {
     margin:0.5rem;
@@ -32,36 +34,56 @@
     height : 20%;
     display: flex;
     flex-direction: column;
+    justify-content:center;
+    align-items:stretch;
+    background-color:#d3e9f4;
+    border-radius: 1rem 1rem 0 0;
+    width:90%;
+    margin:auto;
 }
 
 .logoTitle {
-
-}
-
-#loginID {
-    margin : 1rem 2rem 1rem 2rem;
-    padding : 1rem 0 1rem 0;
-    border:none;
-    border-bottom : solid #F7A249 2px;
     text-align: center;
 }
-#loginName {
-    margin : 0 2rem 1rem 2rem;
-    padding : 1rem 0 1rem 0;
-    border:none;
-    border-bottom : solid #F7A249 2px;
-    text-align: center;
-}
-#doLoginBtn {
-    margin : 0 2rem 0 2rem;
-    padding : 1.5rem 0 1.5rem 0;
-    border : none;
-    background-color : #F7A249;
-    box-shadow : 1px 1px 1px #ffd378;
+.logoTitle>p{
     font-size: x-large;
     font-weight: bolder;
-    color : #666666;
+    margin-top:-0.5rem;
 }
 
+.logoTitle>p>span{
+    font-size: xx-large;
+    font-weight: bolder;
+    color:#318DFC;
+}
+#loginID {
+    border:none;
+    text-align: center;
+    border : solid #738791 2px;
+    margin : 0.5rem 2rem 0 2rem;
+    padding : 1rem 0 1rem 0;
+}
+#loginName {
+    margin : 0.5rem 2rem 0.5rem 2rem;
+    padding : 1rem 0 1rem 0;
+    border:none;
+    text-align: center;
+    border : solid #738791 2px;
+}
+#doLoginBtn {
+    padding : 1.5rem 0 1.5rem 0;
+    border : none;
+    border-radius: 0 0 1rem 1rem;
+    background-color : #a2b7c1;
+    font-size: x-large;
+    font-weight: bolder;
+    color : #FFF;
+    width:100%;
+    margin:auto;
+}
+.loginBtnDiv {
+    width:90%;
+    margin:auto;
+}
 
 

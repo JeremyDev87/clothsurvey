@@ -6,8 +6,7 @@ import {createStore} from 'redux';
 import './assets/css/index.css';
 import App from './App';
 import Login from './login';
-import LogList from './logList';
-import AdminList from './adminList';
+import SurveyInfo from './surveyInfo';
 import TopNav from './partials/topNav';
 import reportWebVitals from './reportWebVitals';
 
@@ -42,13 +41,9 @@ ReactDOM.render(
           <TopNav />
           <App />
         </Route>
-        <Route path="/list">
+        <Route path="/surveyinfo">
           <TopNav />
-          <LogList />
-        </Route>
-        <Route path="/adminlist">
-          <TopNav />
-          <AdminList />
+          <SurveyInfo />
         </Route>
       </Provider>
     </BrowserRouter>
