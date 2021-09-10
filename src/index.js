@@ -7,6 +7,10 @@ import './assets/css/index.css';
 import App from './App';
 import Login from './login';
 import SurveyInfo from './surveyInfo';
+import Question from './question';
+import Question2 from './question2';
+import Question3 from './question3';
+import Question4 from './question4';
 import TopNav from './partials/topNav';
 import reportWebVitals from './reportWebVitals';
 
@@ -37,13 +41,25 @@ ReactDOM.render(
         <Route exact path="/">
           <Login />
         </Route>
-        <Route path="/check">
-          <TopNav />
-          <App />
-        </Route>
         <Route path="/surveyinfo">
           <TopNav />
           <SurveyInfo />
+        </Route>
+        <Route path="/question">
+          <TopNav />
+          <Question />
+        </Route>
+        <Route path="/question2">
+          <TopNav />
+          <Question2 />
+        </Route>
+        <Route path="/question3">
+          <TopNav />
+          <Question3 />
+        </Route>
+        <Route path="/question4">
+          <TopNav />
+          <Question4 />
         </Route>
       </Provider>
     </BrowserRouter>

@@ -1,0 +1,54 @@
+input[id*="question"] {
+    display:none;
+}
+input[id*="question"]+label {
+    display:block;
+    padding:20px;
+    border:none;
+    color:#000;
+    font-weight:900;
+    background:#fab003;
+    cursor:pointer;
+    position:relative;
+}
+input[id*="question"] + label + div {
+    max-height:100%;
+    /* transition:all 0.5s; */
+    overflow:hidden;
+    background:#ebf8ff;
+    font-size: 1rem;
+}
+.answer {
+    display:flex;
+    flex-direction: column;
+}
+input[name*="answer"] + label {
+    display:block;
+    padding:20px;
+    border:1px solid #ffd378;
+    color:#000;
+    font-weight:900;
+    background:#FFF;
+    cursor:pointer;
+    position:relative;
+}
+input[name*="answer"]:checked + label {
+    border:1px solid #ffd378;
+    color:#000;
+    font-weight:900;
+    background:#ffd378;
+}
+.buttonSet {
+    width:100%;
+    text-align: center;
+    margin-top:3rem;
+}
+.buttonSet>button {
+    border:none;
+    padding : 1rem 3rem;
+    background-color : #fab003;
+    color:#000;
+    font-weight:900;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}

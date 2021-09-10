@@ -13,12 +13,12 @@ function SideMenu(props) {
         <div className="sideMenu">
                 <div className="MenuInfo">
                     {/* <strong>{props.state[0].name}</strong> 님 */}
-                    <p>건강 관리 자가 진단</p>
+                    <p>근무복 품평회</p>
                 </div>
                 <div className="navList">
                     <ul>
                         <Link to="/surveyinfo"><li><img src={Info} alt="checkIcon"/><span>품평회란?</span></li></Link>
-                        <Link to="/check"><li><img src={CheckLog} alt="checkIcon"/><span>품평회하기</span></li></Link>
+                        <Link to="/question"><li><img src={CheckLog} alt="checkIcon"/><span>품평회하기</span></li></Link>
                         <Link to="/"><li><img src={LogOut} alt="logOutIcon"/><span>로그아웃</span></li></Link>
                     </ul>
                 </div>
