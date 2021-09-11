@@ -30,9 +30,29 @@ const reducer = (state=StoreState, setStoreState) => {
   if(setStoreState.type==='login'){
     let copy = [...state];
     copy[0] = setStoreState.userInfo;
-    // console.log(copy);
     return copy;
   }
+  if(setStoreState.type==='ans1'){
+    let copy = [...state];
+    copy[0].ans1 = setStoreState.ans;
+    return copy;
+  }
+  if(setStoreState.type==='ans2'){
+    let copy = [...state];
+    copy[0].ans2 = setStoreState.ans;
+    return copy;
+  }
+  if(setStoreState.type==='ans3'){
+    let copy = [...state];
+    copy[0].ans3 = setStoreState.ans;
+    return copy;
+  }
+  if(setStoreState.type==='ans4'){
+    let copy = [...state];
+    copy[0].ans4 = setStoreState.ans;
+    return copy;
+  }
+  
 }
 
 let store = createStore(reducer);

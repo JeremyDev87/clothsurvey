@@ -9,24 +9,21 @@ function Login(props) {
 
     const history = useHistory();
 
-    const onlyNumber = (e) => {
-        let phoneNum = e.target.value;
-        phoneNum = phoneNum.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
-        e.target.value = phoneNum;
-    }
-
     const DoLogin = () => {
         let loginID = document.getElementById("loginID").value?? '';
-        LoginPrc(loginID);
+        let loginName = document.getElementById("loginName").value?? '';
+        LoginPrc(loginID,loginName);
+        //로그인 verrify check
     }
 
-    const LoginPrc = (obj) => {
+    const LoginPrc = (obj1,obj2) => {
         props.dispatch({type:'login',userInfo : {
-            "ID" : "admin",
-            "name" : "관리자",
-            "phone" : "01087855742",
-            "auth" : "M",
-            "driver_id":"0"
+            "ID" : obj1,
+            "name" : obj2,
+            "ans1" : "0",
+            "ans2" : "0",
+            "ans3" : "0",
+            "ans4" : "0"
         }});
         history.push('./surveyinfo');
     }
