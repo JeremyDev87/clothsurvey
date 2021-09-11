@@ -1,7 +1,14 @@
 import React from 'react';
 import './assets/css/question.css';
+import {useHistory} from 'react-router-dom';
 
-function Question3(props) {
+function Question4(props) {
+
+    const history = useHistory();
+
+    const doNextBtn = () => {
+        history.push('./question4');
+    }
 
     return (
         <div className="question">
@@ -20,11 +27,11 @@ function Question3(props) {
                 </div>
             </div>
             <div className="buttonSet">
-                <button>다음</button>
+                <button onClick={doNextBtn}>다음</button>
             </div>
         </div>
     );
 }
 
 
-export default Question3;
+export default Question4;

@@ -3,6 +3,10 @@ import './assets/css/question.css';
 
 function Question4(props) {
 
+    const doSubmitBtn = () => {
+        alert("submit");
+    }
+
     return (
         <div className="question">
             <div className="quesSet">
@@ -20,7 +24,7 @@ function Question4(props) {
                 </div>
             </div>
             <div className="buttonSet">
-                <button>다음</button>
+                <button onClick={doSubmitBtn}>제출</button>
             </div>
         </div>
     );
