@@ -19,7 +19,10 @@ let StoreState = [
   {
     id : 'anonymous'
     ,name:''
-    ,phone : ''
+    ,ans1 : ''
+    ,ans2 : ''
+    ,ans3 : ''
+    ,ans4 : ''
   }
 ]
 

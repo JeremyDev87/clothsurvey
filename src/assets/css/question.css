@@ -52,3 +52,9 @@ input[name*="answer"]:checked + label {
     border-radius: 1rem;
     font-size: 1.2rem;
 }
+.clothImgView {
+    width:100vw;
+}
+.clothImgView>img {
+    width:100%;
+}

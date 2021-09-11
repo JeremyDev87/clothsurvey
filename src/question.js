@@ -1,6 +1,7 @@
 import React from 'react';
 import './assets/css/question.css';
 import {useHistory} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 function Question(props) {
     
@@ -33,5 +34,10 @@ function Question(props) {
     );
 }
 
+function GetStore(state){
+    return {
+        state : state
+    }
+}
 
-export default Question;
+export default connect(GetStore)(Question);
