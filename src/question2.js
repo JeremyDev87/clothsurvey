@@ -1,14 +1,24 @@
 import React from 'react';
 import './assets/css/question.css';
-import {useHistory} from 'react-router-dom';
+import {useHistory,useState} from 'react-router-dom';
 import {connect} from 'react-redux';
 import SampleImg from './assets/images/K2Sample.png'
+
 
 function Question2(props) {
     
     const history = useHistory();
     
-    console.log(props.state[0]);
+    let beforeAns = props.state[0].ans1;
+    let type="Error";
+
+    if(beforeAns===1){
+        type="바람막이";
+    }else if(beforeAns===2){
+        type="패딩점퍼";
+    }else{
+        type="플리스자켓";
+    }
 
     const doNextBtn = () => {
         let ans = document.querySelector('input[name="answer01"]:checked').value; 
@@ -21,7 +31,7 @@ function Question2(props) {
             <div className="quesSet">
                 <input type="radio" id="question01" name="question"/>
                 <label htmlFor="question01">
-                    <span>가장선호하는 바람막이‘제작디자인&브랜드’는?</span>
+                    <span>가장선호하는 {type}‘제작디자인&브랜드’는?</span>
                 </label>
                 <div className="clothImgView">
                     <img src={SampleImg} alt="SampleImg" />

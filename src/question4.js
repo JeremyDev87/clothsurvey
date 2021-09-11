@@ -6,6 +6,16 @@ import {connect} from 'react-redux';
 function Question4(props) {
 
     console.log(props.state[0]);
+    let beforeAns = props.state[0].ans3;
+    let type="Error";
+
+    if(beforeAns===1){
+        type="경량 패딩+경량 플리스";
+    }else if(beforeAns===2){
+        type="경량 플리스+경량 후드집업";
+    }else{
+        type="경량 후드집업+경량 패딩";
+    }
 
     const doSubmitBtn = () => {
         let ans = document.querySelector('input[name="answer01"]:checked').value; 
@@ -18,7 +28,7 @@ function Question4(props) {
             <div className="quesSet">
                 <input type="radio" id="question01" name="question"/>
                 <label htmlFor="question01">
-                    <span>가장선호하는 세트구성1(경량 패딩 + 경량플리스)‘제작디자인&브랜드’는?</span>
+                    <span>가장선호하는 세트구성1({type})‘제작디자인&브랜드’는?</span>
                 </label>
                 <div className="clothImgView">
                     <img src={SampleImg} alt="SampleImg" />
