@@ -36,7 +36,7 @@
     flex-direction: column;
     justify-content:center;
     align-items:stretch;
-    background-color:#d3e9f4;
+    background-color:#ffd378;
     border-radius: 1rem 1rem 0 0;
     width:90%;
     margin:auto;
@@ -54,12 +54,12 @@
 .logoTitle>p>span{
     font-size: xx-large;
     font-weight: bolder;
-    color:#318DFC;
+    color:#fab003;
 }
 #loginID {
     border:none;
     text-align: center;
-    border : solid #738791 2px;
+    border : solid #fab003 2px;
     margin : 0.5rem 2rem 0 2rem;
     padding : 1rem 0 1rem 0;
 }
@@ -68,13 +68,13 @@
     padding : 1rem 0 1rem 0;
     border:none;
     text-align: center;
-    border : solid #738791 2px;
+    border : solid #fab003 2px;
 }
 #doLoginBtn {
     padding : 1.5rem 0 1.5rem 0;
     border : none;
     border-radius: 0 0 1rem 1rem;
-    background-color : #a2b7c1;
+    background-color : #fab003;
     font-size: x-large;
     font-weight: bolder;
     color : #FFF;

@@ -2,8 +2,11 @@ import React from 'react';
 import './assets/css/question.css';
 import SampleImg from './assets/images/K2Sample.png'
 import {connect} from 'react-redux';
+import {useHistory} from 'react-router-dom';
 
 function Question4(props) {
+    
+    const history = useHistory();
 
     console.log(props.state[0]);
     let beforeAns = props.state[0].ans3;
@@ -18,9 +21,15 @@ function Question4(props) {
     }
 
     const doSubmitBtn = () => {
-        let ans = document.querySelector('input[name="answer01"]:checked').value; 
-        props.dispatch({type:'ans4',ans : ans});
-        alert("submit");
+        let select = document.querySelector('input[name="answer01"]:checked');
+        if(select!==null){
+            let ans = select.value; 
+            props.dispatch({type:'ans4',ans : ans});
+            alert("submit");
+            history.push('./');
+        }else{
+            alert("1개의 항목을 선택해주시기 바랍니다.");
+        }
     }
 
     return (

@@ -21,9 +21,14 @@ function Question2(props) {
     }
 
     const doNextBtn = () => {
-        let ans = document.querySelector('input[name="answer01"]:checked').value; 
-        props.dispatch({type:'ans2',ans : ans});
-        history.push('./question3');
+        let select = document.querySelector('input[name="answer01"]:checked');
+        if(select!==null){
+            let ans = select.value; 
+            props.dispatch({type:'ans2',ans : ans});
+            history.push('./question3');
+        }else{
+            alert("1개의 항목을 선택해주시기 바랍니다.");
+        }
     }
 
     return (

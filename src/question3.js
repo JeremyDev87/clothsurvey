@@ -10,9 +10,14 @@ function Question3(props) {
     console.log(props.state[0]);
 
     const doNextBtn = () => {
-        let ans = document.querySelector('input[name="answer01"]:checked').value; 
-        props.dispatch({type:'ans3',ans : ans});
-        history.push('./question4');
+        let select = document.querySelector('input[name="answer01"]:checked');
+        if(select!==null){
+            let ans = select.value; 
+            props.dispatch({type:'ans3',ans : ans});
+            history.push('./question4');
+        }else{
+            alert("1개의 항목을 선택해주시기 바랍니다.");
+        }
     }
 
     return (
