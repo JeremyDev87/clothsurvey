@@ -48,5 +48,6 @@
     "url": "git+https://github.com/SuaAppa/clothsurvey.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "http://172.20.30.219:9999"
 }

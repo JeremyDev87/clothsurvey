@@ -9,8 +9,6 @@ function Question3() {
     const data = useSelector(state=>(state));
     const dispatch = useDispatch();
 
-    console.log(data);
-
     const doNextBtn = () => {
         let select = document.querySelector('input[name="answer01"]:checked');
         if(select!==null){

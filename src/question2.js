@@ -11,7 +11,6 @@ function Question2() {
     const data = useSelector(state=>(state));
     const dispatch = useDispatch();
 
-    console.log(data.mainReducer.ans1);
     let beforeAns = data.mainReducer.ans1;
     let type;
 
@@ -46,17 +45,19 @@ function Question2() {
                 </div>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
-                    <label htmlFor="answer01_1">코오롱스포츠</label>
-                    <input type="radio"id="answer01_3" name="answer01" value="2"/>
-                    <label htmlFor="answer01_3">K2</label>
-                    <input type="radio"id="answer01_4" name="answer01" value="3"/>
-                    <label htmlFor="answer01_4">뉴발란스</label>
-                    <input type="radio"id="answer01_5" name="answer01" value="4"/>
-                    <label htmlFor="answer01_5">헤지스</label>
-                    <input type="radio"id="answer01_6" name="answer01" value="5"/>
-                    <label htmlFor="answer01_6">블랙야크</label>
-                    <input type="radio"id="answer01_7" name="answer01" value="6"/>
-                    <label htmlFor="answer01_7">네파</label>
+                    <label htmlFor="answer01_1">내셔널지오그래픽</label>
+                    <input type="radio"id="answer01_2" name="answer01" value="2"/>
+                    <label htmlFor="answer01_2">네파</label>
+                    <input type="radio"id="answer01_3" name="answer01" value="3"/>
+                    <label htmlFor="answer01_3">뉴발란스</label>
+                    <input type="radio"id="answer01_4" name="answer01" value="4"/>
+                    <label htmlFor="answer01_4">블랙야크</label>
+                    <input type="radio"id="answer01_5" name="answer01" value="5"/>
+                    <label htmlFor="answer01_5">K2</label>
+                    <input type="radio"id="answer01_6" name="answer01" value="6"/>
+                    <label htmlFor="answer01_6">코오롱스포츠</label>
+                    <input type="radio"id="answer01_7" name="answer01" value="7"/>
+                    <label htmlFor="answer01_7">헤지스</label>
                 </div>
             </div>
             <div className="buttonSet">

@@ -13,7 +13,7 @@ import Question2 from './question2';
 import Question3 from './question3';
 import Question4 from './question4';
 import TopNav from './partials/topNav';
-import { store } from './store/store'
+import { store } from './store/store';
 
 const persistor = persistStore(store);
 

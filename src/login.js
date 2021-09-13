@@ -14,16 +14,25 @@ function Login() {
         let loginID = document.getElementById("loginID").value?? '';
         let loginName = document.getElementById("loginName").value?? '';
 
-        dispatch({type:'login', userInfo : {
-            "ID" : loginID,
-            "name" : loginName
+        axios.get(`http://172.20.30.219:9998/api/login?emp_id=${loginID}&emp_name=${loginName}`)
+        .then((result)=>{
+            let verify = result.data[0].cnt;
+            if(verify>0){
+                //중복 체크 추가해야함
+                alert("로그인 성공");
+                LoginPrc(loginID,loginName);
+            }else{
+                alert("품평회 대상자가 아닙니다.")
             }
         })
-        LoginPrc();
-        //로그인 verrify check
     }
 
-    const LoginPrc = () => {
+    const LoginPrc = (obj1,obj2) => {
+        dispatch({type:'login', userInfo : {
+            "ID" : obj1,
+            "name" : obj2
+            }
+        })
         history.push('./surveyinfo');
     };
 

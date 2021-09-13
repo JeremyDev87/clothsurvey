@@ -11,14 +11,11 @@ function Question() {
         ans1 : state.ans1
     }));
     const dispatch = useDispatch();
-    
-    console.log(data);
 
     const doNextBtn = () => {
         let select = document.querySelector('input[name="answer01"]:checked');
         if(select!==null){
             let ans = select.value; 
-            console.log(ans);
 
             dispatch({type:'ans1',ans : ans});
             history.push('./question2');
