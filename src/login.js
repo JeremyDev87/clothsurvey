@@ -4,7 +4,7 @@ import axios from 'axios';
 import './assets/css/login.css';
 import hystecLogo from './assets/images/SK-hynix_RGB_EN.png';
 import checkList from './assets/images/surveylogo_big.png';
-
+import action from './reducers/reducer'
 function Login() {
 
     const history = useHistory();
@@ -13,17 +13,19 @@ function Login() {
     const DoLogin = () => {
         let loginID = document.getElementById("loginID").value?? '';
         let loginName = document.getElementById("loginName").value?? '';
-        LoginPrc(loginID,loginName);
+
+        dispatch({type:'login', userInfo : {
+            "ID" : loginID,
+            "name" : loginName
+            }
+        })
+        LoginPrc();
         //로그인 verrify check
     }
 
-    const LoginPrc = (obj1,obj2) => {
-        dispatch({type:'login',userInfo : {
-            "ID" : obj1,
-            "name" : obj2
-        }});
+    const LoginPrc = () => {
         history.push('./surveyinfo');
-    }
+    };
 
     return (
         <div className="login">

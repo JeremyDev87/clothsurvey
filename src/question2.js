@@ -8,13 +8,11 @@ import SampleImg from './assets/images/K2Sample.png'
 function Question2() {
     
     const history = useHistory();
-    const data = useSelector(state=>({
-        ans1: state.ans1,
-    }));
+    const data = useSelector(state=>(state));
     const dispatch = useDispatch();
 
-    console.log(data);
-    let beforeAns = data&&data.ans1;
+    console.log(data.mainReducer.ans1);
+    let beforeAns = data.mainReducer.ans1;
     let type;
 
     if(beforeAns==="1"){

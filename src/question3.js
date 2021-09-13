@@ -6,9 +6,7 @@ import {useSelector,useDispatch} from 'react-redux';
 function Question3() {
 
     const history = useHistory();
-    const data = useSelector(state=>({
-        ans2: state.ans2,
-    }));
+    const data = useSelector(state=>(state));
     const dispatch = useDispatch();
 
     console.log(data);

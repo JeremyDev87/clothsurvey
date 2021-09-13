@@ -7,20 +7,17 @@ import {useHistory} from 'react-router-dom';
 function Question4() {
     
     const history = useHistory();
+    const data = useSelector(state=>(state));
     const dispatch = useDispatch();
-    const data = useSelector(state=>({
-        ans3: state.ans3,
-    }));
 
-    console.log(data);
+    console.log(data.mainReducer.ans3);
 
-    
-    let beforeAns = data.ans3;
+    let beforeAns = data.mainReducer.ans3;
     let type;
 
-    if(beforeAns===1){
+    if(beforeAns==="1"){
         type="경량 패딩+경량 플리스";
-    }else if(beforeAns===2){
+    }else if(beforeAns==="2"){
         type="경량 플리스+경량 후드집업";
     }else{
         type="경량 후드집업+경량 패딩";
@@ -31,8 +28,8 @@ function Question4() {
         if(select!==null){
             let ans = select.value; 
             dispatch({type:'ans4',ans : ans});
-            alert("submit");
-            history.push('./');
+            // history.push('./');
+            alert(test);
         }else{
             alert("1개의 항목을 선택해주시기 바랍니다.");
         }

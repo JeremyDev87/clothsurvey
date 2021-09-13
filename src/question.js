@@ -8,6 +8,7 @@ function Question() {
     const history = useHistory();
     const data = useSelector(state=>({
         userInfo: state.userInfo,
+        ans1 : state.ans1
     }));
     const dispatch = useDispatch();
     
@@ -18,8 +19,10 @@ function Question() {
         if(select!==null){
             let ans = select.value; 
             console.log(ans);
+
             dispatch({type:'ans1',ans : ans});
             history.push('./question2');
+
         }else{
             alert("1개의 항목을 선택해주시기 바랍니다.");
         }

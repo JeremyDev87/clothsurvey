@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from "react-router-dom";
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import {persistStore} from "redux-persist";
-import {PersistGate} from "redux-persist/integration/react";
+import { persistStore } from "redux-persist";
+import { PersistGate } from "redux-persist/integration/react";
 import './assets/css/index.css';
-import persistedReducer from './reducers/reducer';
 import Login from './login';
 import SurveyInfo from './surveyInfo';
 import Question from './question';
@@ -14,13 +13,13 @@ import Question2 from './question2';
 import Question3 from './question3';
 import Question4 from './question4';
 import TopNav from './partials/topNav';
+import { store } from './store/store'
 
-const store = createStore(persistedReducer);
 const persistor = persistStore(store);
 
 ReactDOM.render(
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
+    <PersistGate persistor={persistor}>
       <BrowserRouter>
         <Route exact path="/">
           <Login />
