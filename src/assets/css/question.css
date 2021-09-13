@@ -1,6 +1,9 @@
 input[id*="question"] {
     display:none;
 }
+input[id*="answer"] {
+    display:none;
+}
 input[id*="question"]+label {
     display:block;
     padding:20px;

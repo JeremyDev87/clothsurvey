@@ -1,16 +1,22 @@
 import React from 'react';
 import './assets/css/question.css';
 import SampleImg from './assets/images/K2Sample.png'
-import {connect} from 'react-redux';
+import {useSelector,useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
-function Question4(props) {
+function Question4() {
     
     const history = useHistory();
+    const dispatch = useDispatch();
+    const data = useSelector(state=>({
+        ans3: state.ans3,
+    }));
 
-    console.log(props.state[0]);
-    let beforeAns = props.state[0].ans3;
-    let type="Error";
+    console.log(data);
+
+    
+    let beforeAns = data.ans3;
+    let type;
 
     if(beforeAns===1){
         type="경량 패딩+경량 플리스";
@@ -24,7 +30,7 @@ function Question4(props) {
         let select = document.querySelector('input[name="answer01"]:checked');
         if(select!==null){
             let ans = select.value; 
-            props.dispatch({type:'ans4',ans : ans});
+            dispatch({type:'ans4',ans : ans});
             alert("submit");
             history.push('./');
         }else{
@@ -66,10 +72,4 @@ function Question4(props) {
     );
 }
 
-function GetStore(state){
-    return {
-        state : state
-    }
-}
-
-export default connect(GetStore)(Question4);
+export default Question4;

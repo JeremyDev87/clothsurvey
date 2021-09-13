@@ -1,20 +1,25 @@
 import React from 'react';
 import './assets/css/question.css';
 import {useHistory,useState} from 'react-router-dom';
-import {connect} from 'react-redux';
+import {useSelector,useDispatch} from 'react-redux';
 import SampleImg from './assets/images/K2Sample.png'
 
 
-function Question2(props) {
+function Question2() {
     
     const history = useHistory();
-    
-    let beforeAns = props.state[0].ans1;
-    let type="Error";
+    const data = useSelector(state=>({
+        ans1: state.ans1,
+    }));
+    const dispatch = useDispatch();
 
-    if(beforeAns===1){
+    console.log(data);
+    let beforeAns = data&&data.ans1;
+    let type;
+
+    if(beforeAns==="1"){
         type="바람막이";
-    }else if(beforeAns===2){
+    }else if(beforeAns==="2"){
         type="패딩점퍼";
     }else{
         type="플리스자켓";
@@ -24,7 +29,7 @@ function Question2(props) {
         let select = document.querySelector('input[name="answer01"]:checked');
         if(select!==null){
             let ans = select.value; 
-            props.dispatch({type:'ans2',ans : ans});
+            dispatch({type:'ans2',ans : ans});
             history.push('./question3');
         }else{
             alert("1개의 항목을 선택해주시기 바랍니다.");
@@ -64,10 +69,4 @@ function Question2(props) {
 }
 
 
-function GetStore(state){
-    return {
-        state : state
-    }
-}
-
-export default connect(GetStore)(Question2);
+export default Question2;

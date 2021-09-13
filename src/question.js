@@ -1,18 +1,24 @@
 import React from 'react';
 import './assets/css/question.css';
 import {useHistory} from 'react-router-dom';
-import {connect} from 'react-redux';
+import {useSelector,useDispatch} from 'react-redux';
 
-function Question(props) {
+function Question() {
     
     const history = useHistory();
-    // console.log(props.state[0]);
+    const data = useSelector(state=>({
+        userInfo: state.userInfo,
+    }));
+    const dispatch = useDispatch();
     
+    console.log(data);
+
     const doNextBtn = () => {
         let select = document.querySelector('input[name="answer01"]:checked');
         if(select!==null){
             let ans = select.value; 
-            props.dispatch({type:'ans1',ans : ans});
+            console.log(ans);
+            dispatch({type:'ans1',ans : ans});
             history.push('./question2');
         }else{
             alert("1개의 항목을 선택해주시기 바랍니다.");
@@ -41,11 +47,4 @@ function Question(props) {
         </div>
     );
 }
-
-function GetStore(state){
-    return {
-        state : state
-    }
-}
-
-export default connect(GetStore)(Question);
+export default Question;

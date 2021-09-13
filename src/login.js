@@ -1,14 +1,15 @@
 import {useHistory} from 'react-router-dom';
-import {connect} from 'react-redux';
+import {useSelector,useDispatch} from 'react-redux';
 import axios from 'axios';
 import './assets/css/login.css';
 import hystecLogo from './assets/images/SK-hynix_RGB_EN.png';
 import checkList from './assets/images/surveylogo_big.png';
 
-function Login(props) {
+function Login() {
 
     const history = useHistory();
-
+    const dispatch = useDispatch();
+    
     const DoLogin = () => {
         let loginID = document.getElementById("loginID").value?? '';
         let loginName = document.getElementById("loginName").value?? '';
@@ -17,13 +18,9 @@ function Login(props) {
     }
 
     const LoginPrc = (obj1,obj2) => {
-        props.dispatch({type:'login',userInfo : {
+        dispatch({type:'login',userInfo : {
             "ID" : obj1,
-            "name" : obj2,
-            "ans1" : "0",
-            "ans2" : "0",
-            "ans3" : "0",
-            "ans4" : "0"
+            "name" : obj2
         }});
         history.push('./surveyinfo');
     }
@@ -49,11 +46,4 @@ function Login(props) {
         </div>
     );
 }
-
-function GetStore(state){
-    return {
-        state : state
-    }
-}
-
-export default connect(GetStore)(Login);
+export default Login;
