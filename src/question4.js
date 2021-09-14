@@ -1,9 +1,11 @@
 import React from 'react';
-import SampleImg from './assets/images/K2Sample.png'
 import {useSelector,useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import './assets/css/question.css';
+import SampleImg1 from './assets/images/sampleImg2-1.png';
+import SampleImg2 from './assets/images/sampleImg2-2.png';
+import SampleImg3 from './assets/images/sampleImg2-3.png';
 
 function Question4() {
     
@@ -56,7 +58,7 @@ function Question4() {
                     <span>가장선호하는 세트구성1({type})‘제작디자인&브랜드’는?</span>
                 </label>
                 <div className="clothImgView">
-                    <img src={SampleImg} alt="SampleImg" />
+                <img src={beforeAns==="1"?SampleImg1:beforeAns==="2"?SampleImg2:SampleImg3} alt="SampleImg" />
                 </div>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>

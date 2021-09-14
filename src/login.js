@@ -19,13 +19,22 @@ function Login() {
             let verify = result.data[0].cnt;
             if(verify>0){
                 //중복 체크 추가해야함
-                alert("로그인 성공");
-                LoginPrc(loginID,loginName);
+                axios.get(`http://172.20.30.219:9998/api/usedchk?emp_id=${loginID}&emp_name=${loginName}`)
+                .then((res)=>{
+                    let used = res.data[0].cnt;
+                    console.log(used);
+                    if(used>0){
+                        alert("품평회에 이미 참여하셨습니다.");
+                    }else{
+                        alert("로그인 성공");
+                        LoginPrc(loginID,loginName);
+                    }
+                })
             }else{
-                alert("품평회 대상자가 아닙니다.")
+                alert("품평회 대상자가 아닙니다.");
             }
         })
-    }
+    };
 
     const LoginPrc = (obj1,obj2) => {
         dispatch({type:'login', userInfo : {
