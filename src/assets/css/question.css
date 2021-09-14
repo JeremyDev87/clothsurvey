@@ -44,7 +44,7 @@ input[name*="answer"]:checked + label {
 .buttonSet {
     width:100%;
     text-align: center;
-    margin-top:3rem;
+    margin:3rem 0;
 }
 .buttonSet>button {
     border:none;
@@ -54,10 +54,16 @@ input[name*="answer"]:checked + label {
     font-weight:900;
     border-radius: 1rem;
     font-size: 1.2rem;
+    box-shadow: 1px 1px 1px 1px;
 }
 .clothImgView {
     width:100vw;
 }
 .clothImgView>img {
     width:100%;
+}
+label[for*=question]>span:nth-child(2) {
+    font-size:small;
+    font-weight: normal;
+    margin-left:1rem;
 }

@@ -40,7 +40,7 @@ function Question2() {
             <div className="quesSet">
                 <input type="radio" id="question01" name="question"/>
                 <label htmlFor="question01">
-                    <span>가장선호하는 {type}‘제작디자인&브랜드’는?</span>
+                    <span>2. 가장선호하는 {type}‘제작디자인&브랜드’는?</span><span>(1개 선택)</span>
                 </label>
                 <div className="clothImgView">
                     <img src={beforeAns==="1"?SampleImg1:beforeAns==="2"?SampleImg2:SampleImg3} alt="SampleImg" />

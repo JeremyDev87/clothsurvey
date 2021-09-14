@@ -1,0 +1,34 @@
+.completeDiv {
+    position:fixed;
+    width:80%;
+    height:50%;
+    background-color: #FFF;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    display:none;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    box-shadow: 3px 3px 3px 3px;
+    
+}
+.completeDiv>span {
+    padding : 1rem;
+}
+.completeDiv>span:nth-child(1) {
+    font-size:xx-large;
+    font-weight: bolder;
+}
+.completeDiv>button {
+    width:80%;
+    padding:1rem;
+    margin-top:2rem;
+    border-radius: 1rem;
+    background-color: #fab003;
+    border:none;
+    box-shadow: 1px 1px 1px 1px;
+    font-size:large;
+    font-weight: bold;
+}

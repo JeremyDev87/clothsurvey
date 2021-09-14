@@ -30,7 +30,7 @@ function Question() {
             <div className="quesSet">
                 <input type="checkbox" id="question01" name="question"/>
                 <label htmlFor="question01">
-                    <span>New 근무복이 ‘두꺼운(중량) 타입 -단독형’일 경우 가장 원하는 스타일은?</span>
+                    <span>1. New 근무복이 ‘두꺼운(중량) 타입 -단독형’일 경우 가장 원하는 스타일은?</span><span>(1개 선택)</span>
                 </label>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>

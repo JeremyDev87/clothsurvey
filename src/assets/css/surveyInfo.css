@@ -1,3 +1,20 @@
+.surveyInfo {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
 .surveyInfo > img{
     width:100%;
+}
+.surveyInfo > button {
+    width:90%;
+    border-radius: 1rem;
+    background-color:#fab003;
+    padding : 1rem;
+    font-size: large;
+    font-weight: bold;
+    border:none;
+    margin-bottom:3rem;
+    box-shadow: 1px 1px 1px 1px;
 }

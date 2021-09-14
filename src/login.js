@@ -4,6 +4,7 @@ import axios from 'axios';
 import './assets/css/login.css';
 import hystecLogo from './assets/images/SK-hynix_RGB_EN.png';
 import checkList from './assets/images/surveylogo_big.png';
+import mouse from './assets/images/touch-svgrepo-com.svg';
 import action from './reducers/reducer'
 function Login() {
 
@@ -26,7 +27,6 @@ function Login() {
                     if(used>0){
                         alert("품평회에 이미 참여하셨습니다.");
                     }else{
-                        alert("로그인 성공");
                         LoginPrc(loginID,loginName);
                     }
                 })
@@ -54,14 +54,35 @@ function Login() {
                 <img src={checkList} alt="checkList" />
             </div>
             <div className="logoTitle">
-                <p><span>'22년 New 근무복</span><br/>모바일 품평회</p>
+                
+                <p>
+                    <span>하이지니어와 함께 만드는</span>
+                    <span>'22년 New 근무복</span>
+                    <span>모바일 품평회</span>
+                </p>
+            </div>
+            <div className="catalogBtnDiv">
+                <button id="docatalogBtn">
+                    <span>카탈로그 다운로드</span>
+                    <span>(09/16 SkyNet 전사공지된 '카탈로그'와 동일함)</span>
+                </button>
+                <img src={mouse} alt="mouse"/>
             </div>
             <div className="submitDiv">
                 <input id="loginID" type="text" placeholder="사번을 입력하세요" maxLength="7" />
                 <input id="loginName" type="text" placeholder="이름을 입력하세요"/>
             </div>
             <div className="loginBtnDiv">
-                <input id="doLoginBtn" type="submit" value="품평회 하기" onClick={DoLogin} />
+                <button id="doLoginBtn" onClick={DoLogin}>
+                    <span>품평회(투표) 참여하기</span>
+                </button>
+                <img src={mouse} alt="mouse"/>
+            </div>
+            <div className="subInfoDiv">
+                <ol>
+                    <li>참여기간 : '21.09.27 ~ 10.03</li>
+                    <li>'PC(EGSS)' 또는 '모바일' 중 1회만 참여 가능</li>
+                </ol>
             </div>
         </div>
     );

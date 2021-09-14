@@ -3,6 +3,7 @@ import {useSelector,useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import './assets/css/question.css';
+import './assets/css/modal.css';
 import SampleImg1 from './assets/images/sampleImg2-1.png';
 import SampleImg2 from './assets/images/sampleImg2-2.png';
 import SampleImg3 from './assets/images/sampleImg2-3.png';
@@ -38,8 +39,11 @@ function Question4() {
                 "ans3":data.mainReducer.ans3,
                 "ans4":ans
             }).then((result)=>{
-                alert("품평회를 완료하였습니다.");
-                history.push("./");
+                // alert("품평회를 완료하였습니다.");
+                let modal = document.getElementById("modal");
+                modal.style.display="flex";
+                console.log(modal);
+                // history.push("./");
             })
             .catch((result)=>{
                 alert("품평 등록에 실패하였습니다.");
@@ -50,12 +54,16 @@ function Question4() {
             }
         }
 
+        const doEnd = () => {
+            history.push("./");
+        }
+        
     return (
         <div className="question">
             <div className="quesSet">
                 <input type="radio" id="question01" name="question"/>
                 <label htmlFor="question01">
-                    <span>가장선호하는 세트구성1({type})‘제작디자인&브랜드’는?</span>
+                    <span>4. 가장선호하는 세트구성1({type})‘제작디자인&브랜드’는?</span><span>(1개 선택)</span>
                 </label>
                 <div className="clothImgView">
                 <img src={beforeAns==="1"?SampleImg1:beforeAns==="2"?SampleImg2:SampleImg3} alt="SampleImg" />
@@ -79,6 +87,12 @@ function Question4() {
             </div>
             <div className="buttonSet">
                 <button onClick={doSubmitBtn}>제출</button>
+            </div>
+            <div className="completeDiv" id="modal">
+                <span>제출 완료</span>
+                <span>온라인 품평회에 <br/>참여해 주셔서 감사합니다.</span>
+                <span>최종 투표 결과는 <br/>10월초에 별도 공지 예정입니다.</span>
+                <button onClick={doEnd}>나가기</button>
             </div>
         </div>
     );

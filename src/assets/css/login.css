@@ -36,8 +36,8 @@
     flex-direction: column;
     justify-content:center;
     align-items:stretch;
-    background-color:#ffd378;
-    border-radius: 1rem 1rem 0 0;
+    /* background-color:#ffd378; */
+
     width:90%;
     margin:auto;
 }
@@ -45,17 +45,28 @@
 .logoTitle {
     text-align: center;
 }
-.logoTitle>p{
-    font-size: x-large;
-    font-weight: bolder;
-    margin-top:-0.5rem;
+.logoTitle>p {
+    display:flex;
+    flex-direction: column;
 }
-
-.logoTitle>p>span{
+.logoTitle>p>span:nth-child(1){
+    font-size: x-small;
+    text-align:left;
+    margin-top:-1rem;
+    margin-left:4rem;
+    font-weight: bolder;
+}
+.logoTitle>p>span:nth-child(2){
     font-size: xx-large;
     font-weight: bolder;
+    /* background-color:blue; */
     color:#fab003;
 }
+.logoTitle>p>span:nth-child(3){
+    font-size: x-large;
+    font-weight: bolder;
+}
+
 #loginID {
     border:none;
     text-align: center;
@@ -73,17 +84,79 @@
 #doLoginBtn {
     padding : 1.5rem 0 1.5rem 0;
     border : none;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1rem;
     background-color : #fab003;
-    font-size: x-large;
+    /* background-color : #FFF; */
+    font-size: large;
     font-weight: bolder;
-    color : #FFF;
-    width:100%;
+    color : #000;
+    width:85%;
     margin:auto;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    box-shadow: 1px 1px 1px 1px;
+}
+#docatalogBtn>span:nth-child(1) {
+    font-size: large;
+    font-weight: bold;
+}
+#docatalogBtn {
+    text-align: center;
+    padding : 1rem 0 1rem 0;
+    border : none;
+    border-radius: 1rem;
+    background-color : #fa6603;
+    /* background-color : #FFF; */
+    color : #000;
+    width:85%;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    box-shadow: 1px 1px 1px 1px;
+
+}
+#docatalogBtn>span:nth-child(2) {
+    font-weight: lighter;
+    font-size: x-small;
 }
 .loginBtnDiv {
     width:90%;
     margin:auto;
+    position:relative;
+    /* left:50%; */
+}
+.catalogBtnDiv {
+    width:90%;
+    margin:auto;
+    position:relative;
+}
+.catalogBtnDiv>img {
+    width:8%;
+    position:absolute;
+    bottom:10%;
+    right:10%;
+    transform: rotate(-45deg);
 }
 
-
+.loginBtnDiv>img {
+    width:8%;
+    position:absolute;
+    bottom:10%;
+    right:10%;
+    transform: rotate(-45deg);
+}
+.subInfoDiv {
+    width:90%;
+    margin:auto;
+}
+.subInfoDiv>ol {
+    /* list-style:none; */
+    font-size:small;
+    font-weight: bold;
+    margin-left:1rem;
+}
