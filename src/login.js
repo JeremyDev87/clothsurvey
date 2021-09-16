@@ -15,12 +15,12 @@ function Login() {
         let loginID = document.getElementById("loginID").value?? '';
         let loginName = document.getElementById("loginName").value?? '';
 
-        axios.get(`http://172.20.30.219:9998/api/login?emp_id=${loginID}&emp_name=${loginName}`)
+        axios.get(`http://166.125.244.71:9999/api/login?emp_id=${loginID}&emp_name=${loginName}`)
         .then((result)=>{
             let verify = result.data[0].cnt;
             if(verify>0){
                 //중복 체크 추가해야함
-                axios.get(`http://172.20.30.219:9998/api/usedchk?emp_id=${loginID}&emp_name=${loginName}`)
+                axios.get(`http://166.125.244.71:9999/api/usedchk?emp_id=${loginID}&emp_name=${loginName}`)
                 .then((res)=>{
                     let used = res.data[0].cnt;
                     console.log(used);

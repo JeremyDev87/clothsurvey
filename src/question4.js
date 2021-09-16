@@ -7,6 +7,7 @@ import './assets/css/modal.css';
 import SampleImg1 from './assets/images/sampleImg2-1.png';
 import SampleImg2 from './assets/images/sampleImg2-2.png';
 import SampleImg3 from './assets/images/sampleImg2-3.png';
+import { getElementError } from '@testing-library/react';
 
 function Question4() {
     
@@ -16,7 +17,6 @@ function Question4() {
 
     let beforeAns = data.mainReducer.ans3;
     let type;
-
     if(beforeAns==="1"){
         type="경량 패딩+경량 플리스";
     }else if(beforeAns==="2"){
@@ -31,7 +31,7 @@ function Question4() {
             let ans = select.value; 
             dispatch({type:'ans4',ans : ans});
 
-            axios.post("http://172.20.30.219:9998/api/submit",{
+            axios.post("http://166.125.244.71:9999/api/submit",{
                 "emp_id":data.mainReducer.userInfo.ID,
                 "emp_name":data.mainReducer.userInfo.name,
                 "ans1":data.mainReducer.ans1,
@@ -57,7 +57,7 @@ function Question4() {
         const doEnd = () => {
             history.push("./");
         }
-        
+
     return (
         <div className="question">
             <div className="quesSet">
@@ -70,17 +70,29 @@ function Question4() {
                 </div>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
-                    <label htmlFor="answer01_1">내셔널지오그래픽</label>
+                    {
+                        beforeAns!=="1"
+                        ?null
+                        :<label htmlFor="answer01_1">내셔널지오그래픽</label>
+                    }
                     <input type="radio"id="answer01_2" name="answer01" value="2"/>
                     <label htmlFor="answer01_2">네파</label>
                     <input type="radio"id="answer01_3" name="answer01" value="3"/>
-                    <label htmlFor="answer01_3">뉴발란스</label>
+                    {
+                        beforeAns==="1"
+                        ?null
+                        :<label htmlFor="answer01_3">뉴발란스</label>
+                    }
                     <input type="radio"id="answer01_4" name="answer01" value="4"/>
                     <label htmlFor="answer01_4">블랙야크</label>
                     <input type="radio"id="answer01_5" name="answer01" value="5"/>
                     <label htmlFor="answer01_5">K2</label>
                     <input type="radio"id="answer01_6" name="answer01" value="6"/>
-                    <label htmlFor="answer01_6">코오롱스포츠</label>
+                    {
+                        beforeAns!=="1"
+                        ?null
+                        :<label htmlFor="answer01_6">코오롱스포츠</label>
+                    }
                     <input type="radio"id="answer01_7" name="answer01" value="7"/>
                     <label htmlFor="answer01_7">헤지스</label>
                 </div>
