@@ -1,3 +1,4 @@
+
 input[id*="question"] {
     display:none;
 }
@@ -18,7 +19,7 @@ input[id*="question"] + label + div {
     max-height:100%;
     /* transition:all 0.5s; */
     overflow:hidden;
-    background:#ebf8ff;
+    /* background:#ebf8ff; */
     font-size: 1rem;
 }
 .answer {
@@ -54,7 +55,7 @@ input[name*="answer"]:checked + label {
     font-weight:900;
     border-radius: 1rem;
     font-size: 1.2rem;
-    box-shadow: 1px 1px 1px 1px;
+    box-shadow: 1px 1px 1px 1px gray;
 }
 .clothImgView {
     width:100vw;
@@ -66,4 +67,54 @@ label[for*=question]>span:nth-child(2) {
     font-size:small;
     font-weight: normal;
     margin-left:1rem;
+}
+.genderDiv {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+}
+.genderDiv>button {
+    padding:1rem;
+    margin:2rem 1rem;
+    font-size: large;
+    border:none;
+    border-radius: 1rem;
+    background-color: #fab003;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+.clothDiv {
+    position:fixed;
+    width:90%;
+    height:90vh;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 1px 1px 1px 1px gray;
+    display:none;
+    z-index: 99;
+}
+.clothDiv>img {
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:100%;
+    max-height: 90vh;
+    transform: translate(-50%,-50%);
+    overflow: scroll;
+    object-fit: cover;
+}
+.clothDiv>button {
+    position:absolute;
+    z-index: 1;
+    right:0;
+    padding:0.5rem;
+    border:none;
+    background-color: transparent;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.question {
+
 }

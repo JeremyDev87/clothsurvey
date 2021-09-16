@@ -97,7 +97,7 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    box-shadow: 1px 1px 1px 1px;
+    box-shadow: 1px 1px 1px 1px gray;
 }
 #docatalogBtn>span:nth-child(1) {
     font-size: large;
@@ -117,7 +117,7 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    box-shadow: 1px 1px 1px 1px;
+    box-shadow: 1px 1px 1px 1px gray;
 
 }
 #docatalogBtn>span:nth-child(2) {

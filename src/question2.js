@@ -34,7 +34,15 @@ function Question2() {
             alert("1개의 항목을 선택해주시기 바랍니다.");
         }
     }
-
+    const openClothModal = (gender) => {
+        console.log(gender);
+        let clothModal = document.getElementById("clothmodal");
+        clothModal.style.display="block";
+    }
+    const closeClothModal = () => {
+        let clothModal = document.getElementById("clothmodal");
+        clothModal.style.display="none";
+    }
     return (
         <div className="question">
             <div className="quesSet">
@@ -42,8 +50,12 @@ function Question2() {
                 <label htmlFor="question01">
                     <span>2. 가장선호하는 {type}‘제작디자인&브랜드’는?</span><span>(1개 선택)</span>
                 </label>
-                <div className="clothImgView">
+                {/* <div className="clothImgView">
                     <img src={beforeAns==="1"?SampleImg1:beforeAns==="2"?SampleImg2:SampleImg3} alt="SampleImg" />
+                </div> */}
+                <div className="genderDiv">
+                    <button onClick={()=>{openClothModal("male")}}>남성복 보기</button>
+                    <button onClick={()=>{openClothModal("female")}}>여성복 보기</button>
                 </div>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
@@ -64,6 +76,10 @@ function Question2() {
             </div>
             <div className="buttonSet">
                 <button onClick={doNextBtn}>다음</button>
+            </div>
+            <div className="clothDiv" id="clothmodal">
+                <button onClick={closeClothModal}>X</button>
+                <img src={beforeAns==="1"?SampleImg1:beforeAns==="2"?SampleImg2:SampleImg3} alt="SampleImg" />
             </div>
         </div>
     );

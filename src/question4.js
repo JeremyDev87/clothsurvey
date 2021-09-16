@@ -65,8 +65,10 @@ function Question4() {
                 <label htmlFor="question01">
                     <span>4. 가장선호하는 세트구성1({type})‘제작디자인&브랜드’는?</span><span>(1개 선택)</span>
                 </label>
-                <div className="clothImgView">
-                <img src={beforeAns==="1"?SampleImg1:beforeAns==="2"?SampleImg2:SampleImg3} alt="SampleImg" />
+
+                <div className="genderDiv">
+                    <button id="male">남성복 보기</button>
+                    <button id="female">여성복 보기</button>
                 </div>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
@@ -105,6 +107,11 @@ function Question4() {
                 <span>온라인 품평회에 <br/>참여해 주셔서 감사합니다.</span>
                 <span>최종 투표 결과는 <br/>10월초에 별도 공지 예정입니다.</span>
                 <button onClick={doEnd}>나가기</button>
+            </div>
+            <div className="clotheDiv" id="clothmodal">
+                <div className="clothImgView">
+                    <img src={beforeAns==="1"?SampleImg1:beforeAns==="2"?SampleImg2:SampleImg3} alt="SampleImg" />
+                </div>
             </div>
         </div>
     );

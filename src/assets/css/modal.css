@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    box-shadow: 3px 3px 3px 3px;
+    box-shadow: 3px 3px 3px 3px gray;
     
 }
 .completeDiv>span {
@@ -28,7 +28,7 @@
     border-radius: 1rem;
     background-color: #fab003;
     border:none;
-    box-shadow: 1px 1px 1px 1px;
+    box-shadow: 1px 1px 1px 1px gray;
     font-size:large;
     font-weight: bold;
 }
