@@ -62,10 +62,10 @@ function Login() {
                 </p>
             </div>
             <div className="catalogBtnDiv">
-                <button id="docatalogBtn">
+                <a href="http://166.125.244.71:9999/api/download" id="docatalogBtn">
                     <span>카탈로그 다운로드</span>
                     <span>(09/16 SkyNet 전사공지된 '카탈로그'와 동일함)</span>
-                </button>
+                </a>
                 <img src={mouse} alt="mouse"/>
             </div>
             <div className="submitDiv">

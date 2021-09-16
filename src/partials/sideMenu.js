@@ -20,7 +20,6 @@ function SideMenu(props) {
                     <ul>
                         <Link to="/surveyinfo"><li><img src={Info} alt="info"/><span>온라인 품평회 소개</span></li></Link>
                         <Link to="/question"><li><img src={CheckLog} alt="checkIcon"/><span>품평회 참여(투표)하기</span></li></Link>
-                        <li><img src={Book} alt="book"/><span>카탈로그 다운로드</span></li>
                         <Link to="/"><li><img src={LogOut} alt="logOutIcon"/><span>로그아웃</span></li></Link>
                     </ul>
                 </div>
