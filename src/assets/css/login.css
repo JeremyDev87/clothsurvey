@@ -140,7 +140,6 @@
     position:absolute;
     bottom:10%;
     right:10%;
-    transform: rotate(-45deg);
 }
 
 .loginBtnDiv>img {

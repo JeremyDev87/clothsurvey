@@ -5,6 +5,7 @@ import './assets/css/login.css';
 import hystecLogo from './assets/images/SK-hynix_RGB_EN.png';
 import checkList from './assets/images/surveylogo_big.png';
 import mouse from './assets/images/touch-svgrepo-com.svg';
+import search from './assets/images/search-solid.svg';
 import action from './reducers/reducer'
 function Login() {
 
@@ -66,7 +67,7 @@ function Login() {
                     <span>카탈로그 다운로드</span>
                     <span>(09/16 SkyNet 전사공지된 '카탈로그'와 동일함)</span>
                 </a>
-                <img src={mouse} alt="mouse"/>
+                <img src={search} alt="search"/>
             </div>
             <div className="submitDiv">
                 <input id="loginID" type="text" placeholder="사번을 입력하세요" maxLength="7" />
@@ -80,8 +81,7 @@ function Login() {
             </div>
             <div className="subInfoDiv">
                 <ol>
-                    <li>참여기간 : '21.09.27 ~ 10.03</li>
-                    <li>'PC(EGSS)' 또는 '모바일' 중 1회만 참여 가능</li>
+                    <li>모바일 참여기간 : '21.09.27 ~ 10.0 ㅊ참여 가능</li>
                 </ol>
             </div>
         </div>
