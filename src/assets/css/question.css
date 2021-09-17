@@ -45,11 +45,12 @@ input[name*="answer"]:checked + label {
 .buttonSet {
     width:100%;
     text-align: center;
-    margin:3rem 0;
+    margin-top:1rem;
 }
 .buttonSet>button {
     border:none;
-    padding : 1rem 3rem;
+    padding : 1rem;
+    width:80%;
     background-color : #fab003;
     color:#000;
     font-weight:900;
@@ -71,50 +72,23 @@ label[for*=question]>span:nth-child(2) {
 .genderDiv {
     width:100%;
     display:flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: #FFF;
+    margin-top : 1rem;
 }
 .genderDiv>button {
     padding:1rem;
-    margin:2rem 1rem;
-    font-size: large;
     border:none;
-    border-radius: 1rem;
-    background-color: #fab003;
     box-shadow: 1px 1px 1px 1px gray;
+    background-color: #fa6603;
+    border-radius: 1rem;
+    color:#FFF;
 }
 .clothDiv {
-    position:fixed;
-    width:90%;
-    height:90vh;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 1px 1px 1px 1px gray;
+    width:100%;
+    margin-top : 1rem;
     display:none;
-    z-index: 99;
 }
 .clothDiv>img {
-    position:absolute;
-    left:50%;
-    top:50%;
     width:100%;
-    max-height: 90vh;
-    transform: translate(-50%,-50%);
-    overflow: scroll;
-    object-fit: cover;
-}
-.clothDiv>button {
-    position:absolute;
-    z-index: 1;
-    right:0;
-    padding:0.5rem;
-    border:none;
-    background-color: transparent;
-    font-size: xx-large;
-    font-weight: bolder;
-}
-.question {
-
 }

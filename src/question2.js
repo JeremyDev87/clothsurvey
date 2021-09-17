@@ -1,10 +1,9 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './assets/css/question.css';
-import {useHistory,useState} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {useSelector,useDispatch} from 'react-redux';
-import SampleImg1 from './assets/images/sampleImg1-1.png';
+import SingleMale from './assets/images/singleSample.jpg';
 import SampleImg2 from './assets/images/sampleImg1-2.png';
-import SampleImg3 from './assets/images/sampleImg1-3.png';
 
 
 function Question2() {
@@ -15,6 +14,7 @@ function Question2() {
     let type;
 
     let beforeAns = data.mainReducer.ans1;
+    let [viewSample,setViewSample] = useState('male');
 
     if(beforeAns==="1"){
         type="바람막이";
@@ -35,14 +35,11 @@ function Question2() {
         }
     }
     const openClothModal = (gender) => {
-        console.log(gender);
         let clothModal = document.getElementById("clothmodal");
+        setViewSample(gender);
         clothModal.style.display="block";
     }
-    const closeClothModal = () => {
-        let clothModal = document.getElementById("clothmodal");
-        clothModal.style.display="none";
-    }
+
     return (
         <div className="question">
             <div className="quesSet">
@@ -53,10 +50,6 @@ function Question2() {
                 {/* <div className="clothImgView">
                     <img src={beforeAns==="1"?SampleImg1:beforeAns==="2"?SampleImg2:SampleImg3} alt="SampleImg" />
                 </div> */}
-                <div className="genderDiv">
-                    <button onClick={()=>{openClothModal("male")}}>남성복 보기</button>
-                    <button onClick={()=>{openClothModal("female")}}>여성복 보기</button>
-                </div>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
                     <label htmlFor="answer01_1">내셔널지오그래픽</label>
@@ -77,9 +70,12 @@ function Question2() {
             <div className="buttonSet">
                 <button onClick={doNextBtn}>다음</button>
             </div>
+            <div className="genderDiv">
+                <button onClick={()=>{openClothModal("male")}}><b>남성</b> 근무복 디자인 보기</button>
+                <button onClick={()=>{openClothModal("female")}}><b>여성</b> 근무복 디자인 보기</button>
+            </div>
             <div className="clothDiv" id="clothmodal">
-                <button onClick={closeClothModal}>X</button>
-                <img src={beforeAns==="1"?SampleImg1:beforeAns==="2"?SampleImg2:SampleImg3} alt="SampleImg" />
+                <img src={viewSample==='male'?SingleMale:SampleImg2} alt="SampleImg" />
             </div>
         </div>
     );
