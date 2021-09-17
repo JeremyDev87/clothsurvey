@@ -10,7 +10,7 @@ function SurveyInfo(props) {
         <div className="surveyInfo">
             투표방법 기간 등 안내 설명(이미지 삽입 예정)
             <img src={InfoImg} alt="InfoImg" />
-            <button><Link to="/question">품평회(투표) 참여하기</Link></button>
+            <Link to="/question">품평회(투표) 참여하기</Link>
         </div>
     );
 }
