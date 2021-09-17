@@ -47,9 +47,6 @@ function Question2() {
                 <label htmlFor="question01">
                     <span>2. 가장선호하는 {type}‘제작디자인&브랜드’는?</span><span>(1개 선택)</span>
                 </label>
-                {/* <div className="clothImgView">
-                    <img src={beforeAns==="1"?SampleImg1:beforeAns==="2"?SampleImg2:SampleImg3} alt="SampleImg" />
-                </div> */}
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
                     <label htmlFor="answer01_1">내셔널지오그래픽</label>
@@ -75,11 +72,7 @@ function Question2() {
                 <button onClick={()=>{openClothModal("female")}}><b>여성</b> 근무복 디자인 보기</button>
             </div>
             <div className="clothDiv" id="clothmodal">
-<<<<<<< HEAD
                 <img src={viewSample==='male'?SingleMale:SampleImg2} alt="SampleImg" />
-=======
-                <img src={viewSample==='male'?SampleImg1:SampleImg2} alt="SampleImg" />
->>>>>>> 17648e809c11240256bbdd238b934e4e504da314
             </div>
         </div>
     );

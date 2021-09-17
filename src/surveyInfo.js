@@ -6,9 +6,8 @@ import mainInfo from './assets/images/maininfo.jpg';
 function SurveyInfo(props) {
     return (
         <div className="surveyInfo">
-            {/* <img src={InfoImg} alt="InfoImg" /> */}
             <img src={mainInfo} alt="mainInfo" />
-            <button><Link to="/question">품평회(투표) 참여하기</Link></button>
+            <Link to="/question">품평회(투표) 참여하기</Link>
         </div>
     );
 }
