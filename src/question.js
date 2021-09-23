@@ -34,11 +34,11 @@ function Question() {
                 </label>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
-                    <label htmlFor="answer01_1">바람막이</label>
+                    <label htmlFor="answer01_1">바람막이재킷</label>
                     <input type="radio"id="answer01_2" name="answer01" value="2"/>
-                    <label htmlFor="answer01_2">패딩점퍼</label>
+                    <label htmlFor="answer01_2">다운패딩점퍼</label>
                     <input type="radio"id="answer01_3" name="answer01" value="3"/>
-                    <label htmlFor="answer01_3">플리스자켓</label>
+                    <label htmlFor="answer01_3">플리스재킷</label>
                 </div>
             </div>
             <div className="buttonSet">

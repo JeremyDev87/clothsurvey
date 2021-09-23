@@ -17,11 +17,11 @@ function Question2() {
     let [viewSample,setViewSample] = useState('male');
 
     if(beforeAns==="1"){
-        type="바람막이";
+        type="바람막이재킷";
     }else if(beforeAns==="2"){
-        type="패딩점퍼";
+        type="다운패딩점퍼";
     }else{
-        type="플리스자켓";
+        type="플리스재킷";
     }
 
     const doNextBtn = () => {
@@ -45,7 +45,7 @@ function Question2() {
             <div className="quesSet">
                 <input type="radio" id="question01" name="question"/>
                 <label htmlFor="question01">
-                    <span>2. 가장선호하는 {type}‘제작디자인&브랜드’는?</span><span>(1개 선택)</span>
+                    <span>2. 아래 '{type}' 중 가장 마음에 드는 ‘New 근무복 제작디자인&브랜드’는?</span><span>(1개 선택)</span>
                 </label>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>

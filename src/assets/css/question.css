@@ -93,3 +93,8 @@ label[for*=question]>span:nth-child(2) {
     width:100%;
 
 }
+label[for*=answer]>span:nth-child(2) {
+    font-size:small;
+    font-weight: normal;
+    margin-left:0.5rem;
+}

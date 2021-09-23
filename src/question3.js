@@ -29,11 +29,11 @@ function Question3() {
                 </label>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
-                    <label htmlFor="answer01_1">경량 패딩 + 경량 플리스</label>
+                    <label htmlFor="answer01_1"><span>세트구성1</span><span>(경량 패딩점퍼 + 경량 플리스재킷)</span></label>
                     <input type="radio"id="answer01_2" name="answer01" value="2"/>
-                    <label htmlFor="answer01_2">경량 플리스 + 경량 후드집업</label>
+                    <label htmlFor="answer01_2"><span>세트구성2</span><span>(경량 플리스재킷 + 경량 후드집업)</span></label>
                     <input type="radio"id="answer01_3" name="answer01" value="3"/>
-                    <label htmlFor="answer01_3">경량 후드집업 + 경량 패딩</label>
+                    <label htmlFor="answer01_3"><span>세트구성3</span><span>(경량 후드집업 + 경량 패딩점퍼)</span></label>
                 </div>
             </div>
             <div className="buttonSet">

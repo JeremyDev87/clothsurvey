@@ -17,11 +17,11 @@ function Question4() {
     let beforeAns = data.mainReducer.ans3;
     let type;
     if(beforeAns==="1"){
-        type="경량 패딩+경량 플리스";
+        type="세트구성1(경량 패딩점퍼+경량 플리스재킷)";
     }else if(beforeAns==="2"){
-        type="경량 플리스+경량 후드집업";
+        type="세트구성2(경량 플리스재킷+경량 후드집업)";
     }else{
-        type="경량 후드집업+경량 패딩";
+        type="세트구성3(경량 후드집업+경량 패딩점퍼)";
     }
 
     const doSubmitBtn = () => {
@@ -41,7 +41,7 @@ function Question4() {
                 // alert("품평회를 완료하였습니다.");
                 let modal = document.getElementById("modal");
                 modal.style.display="flex";
-                console.log(modal);
+                // console.log(modal);
                 // history.push("./");
             })
             .catch((result)=>{
@@ -67,7 +67,7 @@ function Question4() {
             <div className="quesSet">
                 <input type="radio" id="question01" name="question"/>
                 <label htmlFor="question01">
-                    <span>4. 가장선호하는 세트구성1({type})‘제작디자인&브랜드’는?</span><span>(1개 선택)</span>
+                    <span>4. 가장선호하는 {type} 중 가장 마음에 드는‘New 근무복 제작디자인&브랜드’는?</span><span>(1개 선택)</span>
                 </label>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
