@@ -117,12 +117,12 @@ function Question4() {
                 <span>최종 투표 결과는 <br/>10월초에 별도 공지 예정입니다.</span>
                 <button onClick={doEnd}>나가기</button>
             </div>
+            <div className="directionDiv">
+                <img src={direction} alt="direction" id="directionImg"/>
+            </div>
             <div className="genderDiv">
                 <button onClick={()=>{openClothModal("male")}}><b>남성</b> 근무복 디자인 보기</button>
                 <button onClick={()=>{openClothModal("female")}}><b>여성</b> 근무복 디자인 보기</button>
-            </div>
-            <div className="directionDiv">
-                <img src={direction} alt="direction" id="directionImg"/>
             </div>
             <div className="clothDiv" id="clothmodal" ref={scrollRef}>
             <img src={

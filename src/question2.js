@@ -45,7 +45,6 @@ function Question2() {
         setViewSample(gender,beforeAns);
         let clothModal = document.getElementById("clothmodal");
         let directionImg = document.getElementById("directionImg");
-        
         clothModal.style.display="block";
         directionImg.style.display="none";
         scrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
@@ -78,12 +77,12 @@ function Question2() {
             <div className="buttonSet">
                 <button onClick={doNextBtn}>다음</button>
             </div>
+            <div className="directionDiv">
+                <img src={direction} alt="direction" id="directionImg"/>
+            </div>
             <div className="genderDiv">
                 <button id="maleBtn" onClick={()=>{openClothModal("male")}}><span><b>남성</b> 근무복 디자인 보기</span></button>
                 <button id="femaleBtn" onClick={()=>{openClothModal("female")}}><span><b>여성</b> 근무복 디자인 보기</span></button>
-            </div>
-            <div className="directionDiv">
-                <img src={direction} alt="direction" id="directionImg"/>
             </div>
             <div className="clothDiv" id="clothmodal" ref={scrollRef}>
                 <img src={
