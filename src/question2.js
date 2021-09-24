@@ -1,9 +1,14 @@
-import React,{useState} from 'react';
+import React,{useState,useRef} from 'react';
 import './assets/css/question.css';
 import {useHistory} from 'react-router-dom';
 import {useSelector,useDispatch} from 'react-redux';
-import SingleMale from './assets/images/singleSample.jpg';
-import SampleImg2 from './assets/images/sampleImg1-2.png';
+import SingleMale1 from './assets/images/singlemale1.jpg';
+import SingleFemale1 from './assets/images/singlefemale1.jpg';
+import SingleMale2 from './assets/images/singlemale2.jpg';
+import SingleFemale2 from './assets/images/singlefemale2.jpg';
+import SingleMale3 from './assets/images/singlemale3.jpg';
+import SingleFemale3 from './assets/images/singlefemale3.jpg';
+import direction from './assets/images/arrow-alt-circle-down-regular.svg';
 
 
 function Question2() {
@@ -11,6 +16,8 @@ function Question2() {
     const history = useHistory();
     const data = useSelector(state=>(state));
     const dispatch = useDispatch();
+    const scrollRef = useRef();
+
     let type;
 
     let beforeAns = data.mainReducer.ans1;
@@ -35,9 +42,13 @@ function Question2() {
         }
     }
     const openClothModal = (gender) => {
+        setViewSample(gender,beforeAns);
         let clothModal = document.getElementById("clothmodal");
-        setViewSample(gender);
+        let directionImg = document.getElementById("directionImg");
+        
         clothModal.style.display="block";
+        directionImg.style.display="none";
+        scrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
     }
 
     return (
@@ -45,7 +56,7 @@ function Question2() {
             <div className="quesSet">
                 <input type="radio" id="question01" name="question"/>
                 <label htmlFor="question01">
-                    <span>2. 아래 '{type}' 중 가장 마음에 드는 ‘New 근무복 제작디자인&브랜드’는?</span><span>(1개 선택)</span>
+                    <span>1-1. 아래 '{type}' 중 가장 마음에 드는 ‘New 근무복 제작디자인&브랜드’는?</span><span>(1개만 선택)</span>
                 </label>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
@@ -68,11 +79,26 @@ function Question2() {
                 <button onClick={doNextBtn}>다음</button>
             </div>
             <div className="genderDiv">
-                <button onClick={()=>{openClothModal("male")}}><b>남성</b> 근무복 디자인 보기</button>
-                <button onClick={()=>{openClothModal("female")}}><b>여성</b> 근무복 디자인 보기</button>
+                <button id="maleBtn" onClick={()=>{openClothModal("male")}}><span><b>남성</b> 근무복 디자인 보기</span></button>
+                <button id="femaleBtn" onClick={()=>{openClothModal("female")}}><span><b>여성</b> 근무복 디자인 보기</span></button>
             </div>
-            <div className="clothDiv" id="clothmodal">
-                <img src={viewSample==='male'?SingleMale:SampleImg2} alt="SampleImg" />
+            <div className="directionDiv">
+                <img src={direction} alt="direction" id="directionImg"/>
+            </div>
+            <div className="clothDiv" id="clothmodal" ref={scrollRef}>
+                <img src={
+                    beforeAns==="1"
+                    ?viewSample==='male'
+                        ?SingleMale1
+                        :SingleFemale1
+                    :beforeAns==="2"
+                        ?viewSample==='male'
+                            ?SingleMale2
+                            :SingleFemale2
+                    :viewSample==='male'
+                        ?SingleMale3
+                        :SingleFemale3
+                    } alt="SampleImg" />
             </div>
         </div>
     );

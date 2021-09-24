@@ -25,7 +25,7 @@ function Question3() {
             <div className="quesSet">
                 <input type="radio" id="question01" name="question"/>
                 <label htmlFor="question01">
-                    <span>3. New 근무복이 ‘가벼운(경량) 타입 : 2개 1세트’일 경우 가장 원하는 세트 구성은?</span><span>(1개 선택)</span>
+                    <span>2. New 근무복이 ‘가벼운(경량) 타입 : 2개 1세트’일 경우 가장 원하는 세트 구성은?</span><span>(1개만 선택)</span>
                 </label>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>

@@ -1,17 +1,24 @@
-import React,{useState} from 'react';
+import React,{useState,useRef} from 'react';
 import {useSelector,useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import './assets/css/question.css';
 import './assets/css/modal.css';
-import doubleSample from './assets/images/doubleSample.jpg';
-import SampleImg2 from './assets/images/sampleImg2-2.png';
+import DoubleMale1 from './assets/images/doublemale1.jpg';
+import DoubleFemale1 from './assets/images/doublefemale1.jpg';
+import DoubleMale2 from './assets/images/doublemale2.jpg';
+import DoubleFemale2 from './assets/images/doublefemale2.jpg';
+import DoubleMale3 from './assets/images/doublemale3.jpg';
+import DoubleFemale3 from './assets/images/doublefemale3.jpg';
+import direction from './assets/images/arrow-alt-circle-down-regular.svg';
 
 function Question4() {
     
     const history = useHistory();
     const data = useSelector(state=>(state));
     const dispatch = useDispatch();
+    const scrollRef = useRef();
+
     let [viewSample,setViewSample] = useState('male');
 
     let beforeAns = data.mainReducer.ans3;
@@ -57,9 +64,12 @@ function Question4() {
             history.push("./");
         }
         const openClothModal = (gender) => {
+            setViewSample(gender,beforeAns);
             let clothModal = document.getElementById("clothmodal");
-            setViewSample(gender);
+            let directionImg = document.getElementById("directionImg");
             clothModal.style.display="block";
+            directionImg.style.display="none";
+            scrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
         }
     
     return (
@@ -67,7 +77,7 @@ function Question4() {
             <div className="quesSet">
                 <input type="radio" id="question01" name="question"/>
                 <label htmlFor="question01">
-                    <span>4. 가장선호하는 {type} 중 가장 마음에 드는‘New 근무복 제작디자인&브랜드’는?</span><span>(1개 선택)</span>
+                    <span>2-1. 아래 {type} 중 가장 마음에 드는‘New 근무복 제작디자인&브랜드’는?</span><span>(1개만 선택)</span>
                 </label>
                 <div className="answer">
                     <input type="radio"id="answer01_1" name="answer01" value="1"/>
@@ -111,8 +121,23 @@ function Question4() {
                 <button onClick={()=>{openClothModal("male")}}><b>남성</b> 근무복 디자인 보기</button>
                 <button onClick={()=>{openClothModal("female")}}><b>여성</b> 근무복 디자인 보기</button>
             </div>
-            <div className="clothDiv" id="clothmodal">
-                <img src={viewSample==='male'?doubleSample:SampleImg2} alt="SampleImg" />
+            <div className="directionDiv">
+                <img src={direction} alt="direction" id="directionImg"/>
+            </div>
+            <div className="clothDiv" id="clothmodal" ref={scrollRef}>
+            <img src={
+                    beforeAns==="1"
+                    ?viewSample==='male'
+                        ?DoubleMale1
+                        :DoubleFemale1
+                    :beforeAns==="2"
+                        ?viewSample==='male'
+                            ?DoubleMale2
+                            :DoubleFemale2
+                    :viewSample==='male'
+                        ?DoubleMale3
+                        :DoubleFemale3
+                    } alt="SampleImg" />
             </div>
         </div>
     );
